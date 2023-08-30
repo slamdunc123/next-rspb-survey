@@ -7,15 +7,32 @@ import SurveyDataGrid from '../SurveyDataGrid/SurveyDataGrid';
 
 const Survey = () => {
 	const [tableData, setTableData] = useState([]);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const addTableRow = (formData) => {
 		setTableData([...tableData, formData]);
 	};
 
+	const handleOpenModal = () => {
+		setIsModalOpen(true);
+	};
+	const handleCloseModal = () => {
+		setIsModalOpen(false);
+	};
+
+	
+
 	return (
 		<>
-			<SurveyForm addTableRow={addTableRow} />
-			<SurveyDataGrid tableData={tableData} />
+			<SurveyForm
+				addTableRow={addTableRow}
+				isModalOpen={isModalOpen}
+				handleCloseModal={handleCloseModal}
+			/>
+			<SurveyDataGrid
+				tableData={tableData}
+				handleOpenModal={handleOpenModal}
+			/>
 		</>
 	);
 };

@@ -9,7 +9,7 @@ export const columns = [
 	{
 		field: 'startTime',
 		headerName: 'Start Time',
-		type: 'dateTime',
+		// type: 'dateTime',
 		width: 150,
 		editable: true,
 	},
