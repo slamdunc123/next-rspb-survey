@@ -54,12 +54,14 @@ const Form = ({ isModalOpen, handleCloseModal, addTableRow }) => {
 		<Modal
 			open={isModalOpen}
 			onClose={handleCloseModal}
+      sx={{overflow: 'scroll'}}
 		>
 			<Grid
 				container
 				direction='column'
-				justifyContent='flex-end'
+				justifyContent='center'
 				alignItems='center'
+        marginTop={10}
 			>
 				<Grid item>
 					<Box
