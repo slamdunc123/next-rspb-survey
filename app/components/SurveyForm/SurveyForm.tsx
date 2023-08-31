@@ -52,25 +52,25 @@ const Form = ({ isModalOpen, handleCloseModal, addTableRow }) => {
 		<Modal
 			open={isModalOpen}
 			onClose={handleCloseModal}
-			sx={{  overflow: 'scroll' }}
+			sx={{ overflow: 'scroll' }}
 		>
-			<form onSubmit={(e) => handleSubmit(e, formData)}>
-				<Box
-					sx={{
-						display: 'flex',
-						flexDirection: 'column',
-						flexWrap: 'wrap',
-						bgcolor: 'background.paper',
-						border: '2px solid #000',
-						boxShadow: 24,
-						p: 4,
-						position: 'absolute',
-						top: '75%',
-						left: '50%',
-						transform: 'translate(-50%, -50%)',
-						width: 350,
-					}}
-				>
+			<Box
+				sx={{
+					display: 'flex',
+					flexDirection: 'column',
+					flexWrap: 'wrap',
+					bgcolor: 'background.paper',
+					border: '2px solid #000',
+					boxShadow: 24,
+					p: 4,
+					position: 'absolute',
+					top: { sm: '50%', xs: '75%' },
+					left: '50%',
+					transform: 'translate(-50%, -50%)',
+					width: 350,
+				}}
+			>
+				<form onSubmit={(e) => handleSubmit(e, formData)}>
 					<Box
 						sx={{
 							display: 'flex',
@@ -357,8 +357,8 @@ const Form = ({ isModalOpen, handleCloseModal, addTableRow }) => {
 							</Button>
 						</Box>
 					</ButtonGroup>
-				</Box>
-			</form>
+				</form>
+			</Box>
 		</Modal>
 	);
 };
