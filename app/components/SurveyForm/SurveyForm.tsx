@@ -52,7 +52,7 @@ const Form = ({ isModalOpen, handleCloseModal, addTableRow }) => {
 		<Modal
 			open={isModalOpen}
 			onClose={handleCloseModal}
-			sx={{ height: '100%', overflow: 'scroll' }}
+			sx={{  overflow: 'scroll' }}
 		>
 			<form onSubmit={(e) => handleSubmit(e, formData)}>
 				<Box
@@ -65,7 +65,7 @@ const Form = ({ isModalOpen, handleCloseModal, addTableRow }) => {
 						boxShadow: 24,
 						p: 4,
 						position: 'absolute',
-						top: '50%',
+						top: '75%',
 						left: '50%',
 						transform: 'translate(-50%, -50%)',
 						width: 350,
