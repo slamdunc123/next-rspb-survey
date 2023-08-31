@@ -61,7 +61,7 @@ const Form = ({ isModalOpen, handleCloseModal, addTableRow }) => {
 				direction='column'
 				justifyContent='center'
 				alignItems='center'
-        marginTop={10}
+        sx={{ minHeight: '100vh' }}
 			>
 				<Grid item>
 					<Box
